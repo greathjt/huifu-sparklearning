@@ -29,6 +29,25 @@
                     </execution>
                 </executions>
             </plugin>
+            <plugin>
+                <artifactId>maven-shade-plugin</artifactId>
+                 <!--<configuration>-->
+                     <!--<shadedArtifactAttached>false</shadedArtifactAttached>-->
+                     <!--<artifactSet>-->
+                         <!--<includes>-->
+                             <!--<inclue></inclue>-->
+                         <!--</includes>-->
+                     <!--</artifactSet>-->
+                 <!--</configuration>-->
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>shade</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
         </plugins>
     </build>
     <dependencies>
