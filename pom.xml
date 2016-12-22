@@ -7,7 +7,18 @@
     <groupId>com.huifu</groupId>
     <artifactId>spark-learning</artifactId>
     <version>1.0-SNAPSHOT</version>
-
+    <repositories>
+        <repository>
+            <id>cdh-rep</id>
+            <name>cdh-rep</name>
+            <url>https://repository.cloudera.com/content/repositories/releases/</url>
+        </repository>
+        <repository>
+            <id>spring-rep</id>
+            <name>spring-rep</name>
+            <url>http://repo.spring.io/plugins-release/</url>
+        </repository>
+    </repositories>
     <pluginRepositories>
         <pluginRepository>
             <id>scala-tools.org</id>
@@ -31,14 +42,14 @@
             </plugin>
             <plugin>
                 <artifactId>maven-shade-plugin</artifactId>
-                 <!--<configuration>-->
-                     <!--<shadedArtifactAttached>false</shadedArtifactAttached>-->
-                     <!--<artifactSet>-->
-                         <!--<includes>-->
-                             <!--<inclue></inclue>-->
-                         <!--</includes>-->
-                     <!--</artifactSet>-->
-                 <!--</configuration>-->
+                <!--<configuration>-->
+                <!--<shadedArtifactAttached>false</shadedArtifactAttached>-->
+                <!--<artifactSet>-->
+                <!--<includes>-->
+                <!--<inclue></inclue>-->
+                <!--</includes>-->
+                <!--</artifactSet>-->
+                <!--</configuration>-->
                 <executions>
                     <execution>
                         <phase>package</phase>
@@ -76,6 +87,8 @@
             <groupId>org.apache.hbase</groupId>
             <artifactId>hbase</artifactId>
             <version>1.2.0-cdh5.8.3</version>
+            <scope>provided</scope>
+            <type>pom</type>
         </dependency>
         <dependency>
             <groupId>org.apache.hbase</groupId>
@@ -86,6 +99,10 @@
             <groupId>org.apache.hadoop</groupId>
             <artifactId>hadoop-core</artifactId>
             <version>2.6.0-mr1-cdh5.8.3</version>
+        </dependency>
+        <dependency>
+            <groupId></groupId>
+            <artifactId></artifactId>
         </dependency>
     </dependencies>
 </project>
